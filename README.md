@@ -1,2 +1,2 @@
-# flipkart
+# flipkart clone
 index.html
