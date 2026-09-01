@@ -3,126 +3,537 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>flipkart</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Fast code ! Fashion</title>
+    <!-----custom link css-->
+    <link href="style.css" rel="stylesheet">
+    <!-------favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
-<header class="topbar">
-    <div class="container topbar-inner">
-        <div class="logo">Flipkart<span class="accent">clone</span></div>
 
-        <form class="search" role="search" aria-label="Search products">
-            <input type="search" placeholder="Search for products, brands and more" />
-            <button type="submit">Search</button>
-        </form>
-
-        <nav class="actions">
-            <button class="action">Login</button>
-            <button class="action">More</button>
-            <button class="cart">Cart (0)</button>
+<body>
+    <!--NAIGATION -->
+    <header class="navbar">
+        <div class="logo"> Fashion </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="cart.html">Cart</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            </div>
         </nav>
-    </div>
-
-    <nav class="category-bar">
-        <div class="container categories">
-            <a href="#" class="cat">Electronics</a>
-            <a href="#" class="cat">Mobiles</a>
-            <a href="#" class="cat">Fashion</a>
-            <a href="#" class="cat">Home</a>
-            <a href="#" class="cat">Appliances</a>
-            <a href="#" class="cat">Beauty</a>
         </div>
-    </nav>
-</header>
+    </header>
+    <!--------hero section------>
+    <section id="hero">
+        <h1>Redefine your style</h1>
+        <p>Disover the latest trends in global fashion
+            dress trading we should are cloth </p>
+        <img src="assets/kurti.jpg" alt=""> </a>
+        </div>
 
-<main>
-    <section class="hero container">
-        <div class="hero-left">
-            <img src="assets/banner.jpg" alt="">
-            <aside class="hero-right">
-                <div class="deal">Deal of the Day</div>
-                <img src="assets/seller.png" style="width: 40;" alt="" />
-                <p>Up to 70% off on selected items</p>
+    </section>
+    <!-----------about section-------->
+    <section id="about">
+        <div class="about-content">
+            <h2> About us</h2>
+            <p> modern style dress fashion design cloth</p>
+            <div class="about-image">
+                <div class="hero-meta" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">cloth</div>
+                <img src="assets/about.jpg" alt="">
+            </div>
+    </section>
+    <!--gallery section-->
+    <!-- GALLERY -->
+    <section class="gallery-section">
+
+        <div class="section-title">
+            <span>dress MOMENTS</span>
+            <h2>fashion dress</h2>
+            <p>
+                we should are dress design wonder
+                fashion dress beautiful moment
+            </p>
+        </div>
+        <!-- FILTERS -->
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterGallery('all')">
+                ALL
+            </button>
+
+            <button class="filter-btn" onclick="filterGallery('kurti')">
+                kurti
+            </button>
+
+            <button class="filter-btn" onclick="filterGallery('dress')">
+                dress
+            </button>
+
+            <button class="filter-btn" onclick="filterGallery('gown')">
+                gown
+            </button>
+
+            <button class="filter-btn" onclick="filterGallery('fork')">
+                fork
+            </button>
+        </div>
+
+
+        <!-- GALLERY GRID -->
+        <div class="gallery-grid">
+
+            <div class="gallery-item face makeup">
+                <img src="assets/gallery1.jpg" alt="">
+                <div class="overlay">
+                    <div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item nailpolish">
+                <img src="assets/gallery2.jpg" alt="">
+                <div class="overlay">
+                    <div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item lipstick">
+                <img src="assets/gallery3.jpg" alt="">
+                <div class="overlay">
+                    <div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item scrum">
+                <img src="assets/gallery4.jpg" alt="">
+                <div class="overlay">
+                    <div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item makeup">
+                <img src="assets/gallery5.jpg" alt="">
+                <div class="overlay">
+                    <div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item skincare">
+                <img src="assets/gallery6.jpg" alt="">
+                <div class="overlay">
+                    <div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item hair">
+                <img src="assets/gallery7.jpg" alt="">
+                <div class="overlay">
+                    <div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item cream">
+                <img src="assets/gallery8.jpg" alt="">
+                <div class="overlay">
+                    <div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item makeup">
+                <img src="assets/gallery9.jpg" alt="">
+                <div class="overlay">
+                    <div>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- CART SECTION -->
+    <main class="cart-section">
+
+        <div class="cart-layout">
+
+            <!-- CART ITEMS -->
+            <div class="cart-box">
+
+                <h2 class="cart-title">Your Cart</h2>
+
+                <div class="cart-item">
+
+                    <img src="assets/dress dopatta.jpg" style="width: 40%;" alt="">
+
+                    <div class="item-info">
+                        <h3>doptta dress</h3>
+                        <p>Glow Collection • 30ml</p>
+
+                        <div class="quantity">
+                            <button onclick="changeQty(this, -1)">−</button>
+                            <span>1</span>
+                            <button onclick="changeQty(this, 1)">+</button>
+                        </div>
+
+                        <button class="remove" onclick="removeItem(this)">
+                            Remove
+                        </button>
+                    </div>
+
+                    <div class="item-total">
+                        ₹1,899
+                    </div>
+
+                </div>
+
+
+                <div class="cart-item">
+
+                    <img src="assets/gown.jpg" style="width: 40%;" alt="">
+
+                    <div class="item-info">
+                        <h3>Gown</h3>
+                        <p>dress • Rose Nude</p>
+
+                        <div class="quantity">
+                            <button onclick="changeQty(this, -1)">−</button>
+                            <span>1</span>
+                            <button onclick="changeQty(this, 1)">+</button>
+                        </div>
+
+                        <button class="remove" onclick="removeItem(this)">
+                            Remove
+                        </button>
+                    </div>
+
+                    <div class="item-total">
+                        ₹1,299
+                    </div>
+
+                </div>
+
+
+                <div class="cart-item">
+
+                    <img src="assets/wonder.jpg" style="width: 40%;" alt="">
+
+                    <div class="item-info">
+                        <h3>dress gown</h3>
+                        <p>dress beautifully skin</p>
+
+                        <div class="quantity">
+                            <button onclick="changeQty(this, -1)">−</button>
+                            <span>1</span>
+                            <button onclick="changeQty(this, 1)">+</button>
+                        </div>
+
+                        <button class="remove" onclick="removeItem(this)">
+                            Remove
+                        </button>
+                    </div>
+
+                    <div class="item-total">
+                        ₹1,599
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ORDER SUMMARY -->
+            <aside class="summary">
+
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">₹4,797</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>FREE</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Discount</span>
+                    <span>₹0</span>
+                </div>
+
+                <div class="coupon">
+                    <input type="text" id="coupon" placeholder="Coupon code">
+                    <button onclick="applyCoupon()">APPLY</button>
+                </div>
+
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="total">₹4,797</span>
+                </div>
+
+                <button class="checkout" onclick="checkout()">
+                    PROCEED TO CHECKOUT
+                </button>
+
+                <a href="index.html" class="continue">
+                    ← Continue Shopping
+                </a>
+
             </aside>
+
+        </div>
+
+        <!------services section-->
+        <section class="services">
+            <div class="container">
+                <h2 id="hero-heading">Create Fashion services to wonderful dress</h2>
+                <p>we should are there fashion dress services</p>
+                <a href="btn" href=" services.httml">CLOTH</a>
+            </div>
+            <div class="hero-images" aria-hidden="ture">
+                <img src="assets/dress dopatta.jpg" style="width: 30%;" alt="">
+            </div>
+            <h2 id="services-heading" style="margin:0 0 18px 0;text-align:center">Our Services</h2>
+            <div class="services-grid" role="list">
+                <article class="card" role="listitem" aria-labelledby="s1">
+                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3 id="s1">westerns tyle</h3>
+                    <p>we should are take wonderful dress.</p>
+                </article>
+
+                <article class="card" role="listitem" aria-labelledby="s2">
+                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-box-open"></i></div>
+                    <h3 id="s2">gown</h3>
+                    <p>grown dress.</p>
+                </article>
+
+                <article class="card" role="listitem" aria-labelledby="s3">
+                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-star"></i></div>
+                    <h3 id="s3">traditional dress</h3>
+                    <p>Red carpet-ready or casual-chic looks for weddings, galas, interviews and special events, with
+                        on-site prep
+                        available.</p>
+                </article>
+
+                <article class="card" role="listitem" aria-labelledby="s4">
+                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-camera-retro"></i></div>
+                    <h3 id="s4">Photoshoot Styling</h3>
+                    <p>Collaborative styling for personal and commercial shoots — mood boards, outfit sourcing, and
+                        on-set
+                        adjustments.</p>
+                </article>
+
+                <article class="card" role="listitem" aria-labelledby="s5">
+                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h3 id="s5">Trend Consultation</h3>
+                    <p>Market-aware trend reports and capsule creation for influencers, boutiques, and brands seeking a
+                        fresh
+                        direction.</p>
+                </article>
+
+                <article class="card" role="listitem" aria-labelledby="s6">
+                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-scissors"></i></div>
+                    <h3 id="s6">Alterations & Tailoring</h3>
+                    <p>Expert tailoring recommendations and partnerships with local tailors to ensure the perfect fit
+                        for your
+                        favorite pieces.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta" aria-labelledby="cta-heading">
+            <div class="cta-text">
+                <h3 id="cta-heading">Ready to transform your wardrobe?</h3>
+                <p>Book a free 15-minute styling call to discuss your goals and get a personalized plan.</p>
+            </div>
+            <div>
+                <a class="btn" href="contact.html">Book a Free Call</a>
+            </div>
+        </section>
+    </main>
+    <!-- CTA -->
+    <section class="cta" id="contact">
+        <small class="tag">fashion design dress</small>
+
+        <h2>Glow With Confidence.</h2>
+
+        <p>
+            Experience a new standard of design dress.
+        </p>
+
+        <a href="mailto:hello@fashionwebsite.com" class="btn">BOOK YOUR EXPERIENCE</a>
     </section>
+    <!--------cta section end-->
+    <!-- VALUES -->
+    <section class="values">
 
-    <section class=" products container">
-        <h2>sale </h2>
-        <div class="grid">
-            <!-- Product card repeated -->
-            <article class="card">
-                <img src="assets/wireless header.png" style=" width:40%;" alt="" />
-                <h3>Wireless Headphones</h3>
-                <p class="price">₹1.432 <span class="old">₹5.234</span></p>
-                <p class="rating">★ 6.1• 24.345 ratings</p>
-                <button class="btn">Add to cart</button>
-            </article>
+        <span class="section-label">Why Choose Us</span>
 
-            <article class="card">
-                <img src="assets/smartphone.png" style="width: 40%;" alt="" />
-                <h3>Smartphone</h3>
-                <p class="price">₹12.399 <span class="old">₹21,678</span></p>
-                <p class="rating">★ 1.9 • 267 ratings</p>
-                <button class="btn">Add to cart</button>
-            </article>
+        <h2>Our Dress Philosophy</h2>
 
-            <article class="card">
-                <img src="assets/speaker.png" style="width: 40;" alt="" />
-                <h3>Sneakers</h3>
-                <p class="price">₹2.456 <span class="old">₹6,789</span></p>
-                <p class="rating">★ 3.4 •3,210 ratings</p>
-                <button class="btn">Add to cart</button>
-            </article>
+        <div class="value-grid">
+            <img src="assets/dress dopatta.jpg" style="width: 30%;" alt="">
+            <div class="value-card">
+                <div class="value-icon">✦</div>
+                <h3>Personalized</h3>
+                <p>
+                    Every client is unique. We create dress experiences
+                    tailored to your style, personality and occasion.
+                </p>
+            </div>
 
-            <article class="card">
-                <img src="assets/smartwatch.png" style="width: 40;" alt="" />
-                <h3>Smart Watch</h3>
-                <p class="price">₹5.666 <span class="old">₹7,999</span></p>
-                <p class="rating">★ 9.0 • 5,678 ratings</p>
-                <button class="btn">Add to cart</button>
-            </article>
+            <div class="value-card">
+                <div class="value-icon">♡</div>
+                <h3> dress Care</h3>
+                <p>
+                    .fashion we are dress take perfect design
+                </p>
+            </div>
 
-            <article class="card">
-                <img src="assets/tvled.png" style="width: 40%;" alt="" />
-                <h3>LED TV</h3>
-                <p class="price">₹ 4, 976 <span class="old">₹34,888</span></p>
-                <p class="rating">★ 5.4 • 987 ratings</p>
-                <button class="btn">Add to cart</button>
-            </article>
+            <div class="value-card">
+                <div class="value-icon">✧</div>
+                <h3>modern design dress</h3>
+                <p>
+                    .we should are tak
+                </p>
+            </div>
 
-            <article class="card">
-                <img src="assets/backpack.png" style="width: 40;" alt="">
-                <h3>Backpack</h3>
-                <p class="price">₹267 <span class="old">₹5.565</span></p>
-                <p class="rating">★ 8.9 • 3.456 ratings</p>
-                <button class="btn">Add to cart</button>
-            </article>
+        </div>
+
+    </section>
+    <!-----contact form section------>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+    <!------login section------->
+    <section id="login">
+        <div class="login-content">
+            <h2>Login</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
         </div>
     </section>
-</main>
+    <!---register section--->
+    <section id="register">
+        <div class="register-content">
+            <h2>Register</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+    </section>
+    <!----footer services--->
+    <footer>
+        <div class="container">
+            <div class="box">
+                <div class="container">
+                    <div class="social-icon">
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="Pinterest">Pinterest</a>
+                        <a href="#" aria-label="Youtube">Youtube</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Women Collection</a></li>
+                        <li><a href="#">Men Collection</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get special offers and styling tips.</p>
+                    <form action="#" method="POST">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUMIÈRE. All rights reserved.</p>
+                <ul class="legal-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+    </footer>
 
-<footer class="site-footer">
-    <div class="container footer-inner">
-        <div>
-            <h4>About</h4>
-            <p> Flipkart clone created website</p>
-        </div>
-        <div>
-            <h4>Help</h4>
-            <a href="#">Customer Service</a><br />
-            <a href="#">Returns</a>
-        </div>
-        <div>
-            <h4>Contact</h4>
-            <p>support@example.com</p>
-        </div>
-    </div>
-    <div class="copyright">© 2026 Flipkart Clone website all right reverse</div>
-</footer>
-</body>
+    <!------footer scetion-->
+    <script src=" stylesheet" href="style.css"></script>
+    </book>
 
 </html>

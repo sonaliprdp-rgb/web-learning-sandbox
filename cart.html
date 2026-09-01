@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=" device-width, initial-scale="8">
+    <title>Fast code ! Fashion</title>
+    <!-----custom link css-->
+    <link href="style.css" rel="stylesheet">
+    <!-------favion -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+
+<body>
+    <!--NAIGATION -->
+    <header class="navbar">
+        <div class="logo"> Fashion </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="cart.html">Cart</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            </div>
+        </nav>
+        </div>
+
+        </head>
+
+        <body>
+            <!--------hero section------>
+            <section id="hero">
+                <h1>Redefine your style</h1>
+                <p>Disover the latest trends in global fashion
+                    dress trading we should are cloth </p>
+                </div>
+            </section>
+            <!-- CART SECTION -->
+            <main class="cart-section">
+
+                <div class="cart-layout">
+
+                    <!-- CART ITEMS -->
+                    <div class="cart-box">
+
+                        <h2 class="cart-title">Your Cart</h2>
+
+                        <div class="cart-item">
+
+                            <img src="assets/dress dopatta.jpg" style="width: 40%;" alt="">
+
+                            <div class="item-info">
+                                <h3>doptta dress</h3>
+                                <p>Glow Collection • 30ml</p>
+
+                                <div class="quantity">
+                                    <button onclick="changeQty(this, -1)">−</button>
+                                    <span>1</span>
+                                    <button onclick="changeQty(this, 1)">+</button>
+                                </div>
+
+                                <button class="remove" onclick="removeItem(this)">
+                                    Remove
+                                </button>
+                            </div>
+
+                            <div class="item-total">
+                                ₹1,899
+                            </div>
+
+                        </div>
+
+
+                        <div class="cart-item">
+
+                            <img src="assets/gown.jpg" style="width: 40%;" alt="">
+
+                            <div class="item-info">
+                                <h3>Gown</h3>
+                                <p>dress • Rose Nude</p>
+
+                                <div class="quantity">
+                                    <button onclick="changeQty(this, -1)">−</button>
+                                    <span>1</span>
+                                    <button onclick="changeQty(this, 1)">+</button>
+                                </div>
+
+                                <button class="remove" onclick="removeItem(this)">
+                                    Remove
+                                </button>
+                            </div>
+
+                            <div class="item-total">
+                                ₹1,299
+                            </div>
+
+                        </div>
+
+
+                        <div class="cart-item">
+
+                            <img src="assets/wonder.jpg" style="width: 40%;" alt="">
+
+                            <div class="item-info">
+                                <h3>dress gown</h3>
+                                <p>dress beautifully skin</p>
+
+                                <div class="quantity">
+                                    <button onclick="changeQty(this, -1)">−</button>
+                                    <span>1</span>
+                                    <button onclick="changeQty(this, 1)">+</button>
+                                </div>
+
+                                <button class="remove" onclick="removeItem(this)">
+                                    Remove
+                                </button>
+                            </div>
+
+                            <div class="item-total">
+                                ₹1,599
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ORDER SUMMARY -->
+                    <aside class="summary">
+
+                        <h2>Order Summary</h2>
+
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">₹4,797</span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span>FREE</span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Discount</span>
+                            <span>₹0</span>
+                        </div>
+
+                        <div class="coupon">
+                            <input type="text" id="coupon" placeholder="Coupon code">
+                            <button onclick="applyCoupon()">APPLY</button>
+                        </div>
+
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="total">₹4,797</span>
+                        </div>
+
+                        <button class="checkout" onclick="checkout()">
+                            PROCEED TO CHECKOUT
+                        </button>
+
+                        <a href="index.html" class="continue">
+                            ← Continue Shopping
+                        </a>
+
+                    </aside>
+
+                </div>
+
+
+
+                <!--footer section-->
+                <footer class="site-footer">
+                    <div class="container footer-grid">
+                        <div>
+                            <div class="box">
+                                <h1>Quick link</h1>
+                                <a href="about.html">About</a>
+                                <a href="service.html">Service</a>
+                                <a href="traditonal.html">Traditional</a>
+                                <a href="cart.html">Cart</a>
+                            </div>
+
+                            <div class="box">
+                                <a href="#contact">Contact</a>
+                                <a href="#shipping">Shipping</a>
+                                <a href="#returns">Returns</a>
+                            </div>
+                            <div>
+                                <h4>Follow</h4>
+                                <a href="#" aria-label="youtube">Youtube</a>
+                                <a href="#" aria-label="facebook">facebook</a>
+                                <a href="#" aria-label="pinterset">Pinterset</a>
+                                <a href="#" aria-label="whatapps">Whatapps</a>
+
+                                <div calss="box">
+                                    <strong>BrandName</strong>
+                                    <p class="muted">© <span id="year"></span> Fashion website. All rights reserved.
+                                    </p>
+                                </div>
+                </footer>
+                <!------footer scetion-->
+                <script>
+
+                    <script src="stylesheet" href="style.css"></script>
+                </book>
+
+</html>
