@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> fast code-Real Estate</title>
+    <meta http-equiv="X-UA-Compatible" href="content">
+    <!--------------google font link----------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!----------css link ------>
+    <link ref="stylesheet" href="script.js">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            text-decoration: none;
+            list-style: none;
+            background-color: #f44336;
+            border: none;
+        }
+
+        .hero {
+            min-height: 100dvh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(11, 4, 4, 0.1)), url(assets/realstate.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: baseline;
+            width: 98%;
+            margin: auto;
+            padding: 10px 0;
+            border-bottom: 2px solid #8848b5;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0.20px;
+        }
+
+        nav ul li a {
+            font-size: 15px;
+            color: #b61313;
+            text-transform: uppercase;
+        }
+
+        .nav ul li a:hover {
+            border-bottom: 2px solid chocolate;
+        }
+
+        nav button {
+            background: transparent;
+            padding: 11px 35px;
+            border: 2px solid #23df;
+            font-size: 15px;
+            font-weight: 600;
+            color: #b61313;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        nav button:hover {
+            color: #8848b5;
+            background: #b61313;
+            scale: .8s;
+        }
+
+        .content {
+            position: absolute;
+            top: 35%;
+            left: 90px;
+        }
+
+        h2 {
+            color: darkgoldenrod;
+            font-size: 52px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: aquamarine;
+            font-size: 11px;
+            margin-top: 10px;
+        }
+
+        .content button {
+            padding: 12px 45px;
+            border: 2px solid darkmagenta;
+            color: bisque;
+            background: #b61313;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 50px;
+            transition: .5s;
+        }
+
+        .content button:hover {
+            scale: .9;
+        }
+
+        .content button.know_more {
+            background: transparent;
+            color: blanchedalmond;
+            margin-left: 25px;
+        }
+
+        .content button.know_more:hover {
+            background: #8848b5;
+            color: antiquewhite;
+            scale: .1;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        .cancelbtn {
+            width: 100%;
+        }
+
+        .real-estate-footer {
+            background-color: #1a2530;
+            color: #e2e8f0;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            padding: 60px 0 0 0;
+            font-size: 0.95rem;
+        }
+
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        /* Column Rules */
+        .footer-column {
+            flex: 1 1 220px;
+            /* Responsive resizing with min-width of 220px */
+        }
+
+        /* Typography Rules */
+        .footer-column h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-column h3 span {
+            color: #34d399;
+            /* Emerald accent for branding */
+        }
+
+        .footer-column h4 {
+            color: #fff;
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        /* Small underline accent rule under headers */
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #34d399;
+        }
+
+        .footer-column p {
+            line-height: 1.6;
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+
+        /* List Item Formatting */
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        /* Smooth color transition on hover */
+        .footer-column ul li a:hover {
+            color: #34d399;
+            text-indent: 5px;
+            /* Slight push animation on hover */
+        }
+
+        /* Social Icon Layout */
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: #2d3748;
+            color: #fff;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #34d399;
+        }
+
+        /* Specific Real Estate Additions */
+        .contact-info i {
+            color: #34d399;
+            margin-right: 8px;
+            width: 16px;
+        }
+
+        .license-text {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            border-top: 1px solid #2d3748;
+            padding-top: 15px;
+        }
+
+        /* Copyright Strip Rules */
+        .footer-bottom {
+            background-color: #0f172a;
+            padding: 20px 0;
+            margin-top: 60px;
+            border-top: 1px solid #2d3748;
+        }
+
+        .footer-bottom-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom-container .eho i {
+            color: #64748b;
+            margin-right: 4px;
+        }
+
+        /* Mobile Media Queries */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .footer-bottom-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-------header section--->
+    <section class="header" id="header">
+        <nav class="nav">
+            <div class="container">
+                <a href="#" class="logo">RealState</a>
+
+                <ul class="nav-link"></ul>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="property.html">property</a>
+                <a href="services.html">Services</a>
+                <a href="rent.html">Rent</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                </ul>
+        </nav>
+        </header>
+
+        <!---hero------->
+        <secion class="hero">
+            <div class="container">
+                <div class="Layout-grid">
+                    <h1>find Your house Perfect home modern</h1>
+                </div>
+    </section>
+    <!---hero end -->
+
+
+    <!-- Rental Listings Left Column -->
+    <section class="listings-container">
+        <h2 style="margin-bottom: 25px; color: var(--primary);">Available Rental Units</h2>
+
+        <div class="listings-grid">
+            <!-- Listing 1 -->
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <span class="tag-badge">New</span>
+                    <img src="assets/property management.jpg" alt="">
+                    <span class="price-badge">$2,200/mo</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Skyline Modern Apartment</h3>
+                    <p class="card-location"><i class="fa-solid fa-location-dot"></i> 742 Evergreen Terrace,
+                        Downtown
+                    </p>
+                    <div class="card-features">
+                        <span><i class="fa-solid fa-bed"></i> 2 Bed</span>
+                        <span><i class="fa-solid fa-bath"></i> 2 Bath</span>
+                        <span><i class="fa-solid fa-maximize"></i> 1,100 sqft</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Listing 2 -->
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <span class="tag-badge">Featured</span>
+                    <img src="assets/legal assisyance.jpg" alt="">
+                    <span class="price-badge">$3,500/mo</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Oakridge Suburban House</h3>
+                    <!-----rental section end-->
+                    <!-------footer section start------------->
+                    <footer>
+                        <div class="container">
+                            <div class="footer-content">
+                                <h2>contact us</h2>
+                                <p>Email:info@example.com</p>
+                                <p>phone + 21 56556 565556</p>
+                                <p>Address: your Address 123 Street</p>
+                            </div>
+                            <div class="footer-content">
+                                <h1>Quick link</h1>
+                                <a href="about.html">About</a>
+                                <a href="service.html">Services</a>
+                                <a href="property.html">property</a>
+                                <a href="rental.html">Rental</a>
+                                <a href="saller.html">Saller</a>
+                                <a href="contact.html">Contact</a>
+                            </div>
+
+                            <div clss="footer-content">
+                                <h2> follow</h2>
+                                <a href="services.html">Services</a>
+                                <a href="property.html">Property</a>
+                                <a href="booking.html">booking</a>
+                                <a href="inform.html">Information</a>
+                            </div>
+
+                            <div class="footer-content">
+                                <h2>follow</h2>
+                                <a href="#"><i class="fab-fa-facebook"></i></a>
+                                <a href="#"><i class="fab-fa-twitter"></i></a>
+                                <a href="#"><i class="fab-fa-youtube"></i></a>
+                                <a href="#"><i class="fab-fa-instagram"></i></a>
+                            </div>
+                            <p>&copy; © 2026 Dream Homes Real Estate.All rights reserved.</p>
+                    </footer>
+
+                    <!--------footer section end--------->
+                    <!---------------script link-------------------------------------->
+                    <script src="script.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                        crossorigin="anonymous"></script>
+</body>
+
+</html>

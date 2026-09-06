@@ -3,537 +3,1900 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
-    <title>Fast code ! Fashion</title>
-    <!-----custom link css-->
-    <link href="style.css" rel="stylesheet">
-    <!-------favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" href="content">
+    <!--------------google font link----------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!----------css link ------>
+    <link rel="stylesheet" href="style.css">
+    <title> fast code!Real Estate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .hero {
+            min-height: 100dvh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(11, 4, 4, 0.1)), url(assets/realstate.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: baseline;
+            width: 98%;
+            margin: auto;
+            padding: 10px 0;
+            border-bottom: 2px solid #8848b5;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0.20px;
+        }
+
+        nav ul li a {
+            font-size: 15px;
+            color: #b61313;
+            text-transform: uppercase;
+        }
+
+        .nav ul li a:hover {
+            border-bottom: 2px solid chocolate;
+        }
+
+        nav button {
+            background: transparent;
+            padding: 11px 35px;
+            border: 2px solid #23df;
+            font-size: 15px;
+            font-weight: 600;
+            color: #b61313;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        nav button:hover {
+            color: #8848b5;
+            background: #b61313;
+            scale: .8s;
+        }
+
+        .content {
+            position: absolute;
+            top: 35%;
+            left: 90px;
+        }
+
+        h2 {
+            color: darkgoldenrod;
+            font-size: 52px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: aquamarine;
+            font-size: 11px;
+            margin-top: 10px;
+        }
+
+        .content button {
+            padding: 12px 45px;
+            border: 2px solid darkmagenta;
+            color: bisque;
+            background: #b61313;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 50px;
+            transition: .5s;
+        }
+
+        .content button:hover {
+            scale: .9;
+        }
+
+        .content button.know_more {
+            background: transparent;
+            color: blanchedalmond;
+            margin-left: 25px;
+        }
+
+        .content button.know_more:hover {
+            background: #8848b5;
+            color: antiquewhite;
+            scale: .1;
+        }
+
+        .about-hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.85)),
+                url('images/real-estate-bg.jpg') no-repeat center center/cover;
+            padding: 100px 20px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .about-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .about-container {
+            max-width: var(--max-width);
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .about-split {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content h2 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        /* Gold decorative underline for the header */
+        .about-content h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin-top: 10px;
+        }
+
+        .about-content p {
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        /* 4. Company Performance Counters/Stats */
+        .about-stats {
+            background-color: var(--bg-light);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        /* 5. Core Values / Why Choose Us Grid */
+        .about-values {
+            max-width: var(--max-width);
+            margin: 80px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .about-values h2 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .value-box {
+            padding: 40px 30px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            transition: var(--transition);
+            text-align: left;
+        }
+
+        .value-box:hover {
+            border-color: var(--primary-color);
+            background-color: var(--white);
+            box-shadow: 0 10px 30px rgba(26, 54, 93, 0.05);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .value-box h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .value-box p {
+            color: var(--text-light);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+
+        /* Tablet View Optimization */
+        @media (max-width: 992px) {
+            .about-split {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile Phone View Optimization */
+        @media (max-width: 576px) {
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .services-section {
+            padding: 80px 20px;
+            background-color: var(--bg-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* --- Section Header --- */
+        .services-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+        }
+
+        .services-header .sub-title {
+            color: var(--accent-color);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .services-header h2 {
+            color: var(--primary-color);
+            font-size: 36px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* --- Responsive Layout Grid --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- Individual Service Cards --- */
+        .service-card {
+            background-color: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #f1f5f9;
+        }
+
+        /* Hover Effects */
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--accent-color);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* --- Card Components --- */
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #fef3c7;
+            /* Light gold tint */
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            font-size: 22px;
+            margin: 0 0 15px 0;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0 0 20px 0;
+        }
+
+        /* Read More Link */
+        .service-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+
+        .service-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* Base resets specifically for the component area */
+        .properties-section * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        .properties-section {
+            background-color: var(--bg-light);
+            padding: 60px 20px;
+        }
+
+
+
+        .properties-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        /* CSS Grid layout for 1, 2, or 3-column placement dynamically */
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* ==========================================================================
+   3. PROPERTY CARD INNER STYLES
+   ========================================================================== */
+        .property-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Card Hover Animation */
+        .property-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Image Container & Aspect Ratio Lock */
+        .property-image-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 66.67%;
+            /* Fixed 3:2 Aspect Ratio */
+            background-color: #e5e7eb;
+        }
+
+        .property-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .property-card:hover .property-image {
+            transform: scale(1.05);
+        }
+
+        /* Status Badges Overlay */
+        .property-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 6px 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: var(--radius-sm);
+            z-index: 2;
+        }
+
+        .property-badge.rent {
+            background-color: var(--secondary-color);
+        }
+
+
+        .property-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .property-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .property-price span {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        .property-title {
+            font-size: 1.125rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .property-location {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Specific details row (Bed, Bath, Sqft) */
+        .property-specs {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+            margin-top: auto;
+            /* Forces specs row to stick to card bottom */
+        }
+
+        .spec-item {
+            font-size: 0.875rem;
+            color: var(--text-dark);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .spec-item span {
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+
+        /* Info Column Styling */
+        .contact-info {
+            background-color: #0b2c4d;
+            color: #ffffff;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: #a3b8cc;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .info-item .icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .info-item a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .info-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Form Styling */
+        .contact-form-wrapper {
+            padding: 40px;
+        }
+
+        .real-estate-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #334e68;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+            color: #334e68;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        /* Accessible focus states */
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #0284c7;
+            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+        }
+
+        /* Primary Form Action Button */
+        .btn-submit {
+            background-color: #0284c7;
+            /* Bright sky blue action color */
+            color: #ffffff;
+            border: none;
+            padding: 14px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #0369a1;
+        }
+
+
+        .contact-section {
+            padding: 60px 20px;
+            background-color: #f9fbfd;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .contact-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .register-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .register-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .register-header h1 {
+            color: var(--primary-color);
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .register-header p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* User Role Selection Tabs */
+        .role-selection {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .role-radio {
+            display: none;
+        }
+
+        .role-label {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        .role-radio:checked+.role-label {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            background-color: rgba(30, 58, 138, 0.05);
+        }
+
+        /* Form Layout */
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            font-size: 15px;
+            color: var(--text-dark);
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+        }
+
+        /* Terms and Conditions Checkbox */
+        .terms-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .terms-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 3px;
+            cursor: pointer;
+        }
+
+        .terms-group label {
+            font-size: 13px;
+            color: var(--text-light);
+            line-net: 1.4;
+        }
+
+        .terms-group a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        /* Submit Button */
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-submit:hover {
+            background-color: #059669;
+            /* Darker green */
+            transform: translateY(-1px);
+        }
+
+        body {
+            background-color: #f3f4f6;
+            border: box-sizing;
+        }
+
+        /* Footer Link */
+        .login-link {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .login-link a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .login-container {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            /* Replace with your high-res property photo */
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+                url('assets/modern1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+
+        /* --- Login Card Container --- */
+        .login-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            /* Subtle glassmorphism effect */
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            /* Gives the form depth */
+        }
+
+        .login-header h2 {
+            color: #1f2937;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .login-header p {
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        /* --- Role Selection Tabs --- */
+        .role-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+            background: #e5e7eb;
+            padding: 4px;
+            border-radius: 8px;
+        }
+
+        .role-selector label {
+            flex: 1;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .role-selector input[type="radio"] {
+            display: none;
+            /* Hide standard radio circle */
+        }
+
+        .role-selector span {
+            display: block;
+            padding: 8px 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: #4b5563;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .role-selector input[type="radio"]:checked+span {
+            background: #0056b3;
+            /* Primary real estate blue brand color */
+            color: #ffffff;
+        }
+
+        /* --- Form Fields UI --- */
+        .input-group {
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 6px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .input-group input:focus {
+            border-color: #0056b3;
+            box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.15);
+        }
+
+        /* --- Form Utility Actions --- */
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .remember-me {
+            color: #4b5563;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .forgot-pass {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .forgot-pass:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Interactive Action Buttons --- */
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background-color: #0056b3;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #004085;
+        }
+
+        /* --- Dividers & Alternates --- */
+        .divider {
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .divider::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+            background: #e5e7eb;
+            z-index: 1;
+        }
+
+        .divider span {
+            background: #ffffff;
+            padding: 0 10px;
+            color: #9ca3af;
+            font-size: 13px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-login {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .btn-social {
+            flex: 1;
+            padding: 10px;
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            color: #374151;
+            transition: background 0.2s;
+        }
+
+        .btn-social:hover {
+            background: #f9fafb;
+        }
+
+        .signup-link {
+            font-size: 14px;
+            color: #4b5563;
+            text-align: center;
+        }
+
+        .signup-link a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+
+
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        .cancelbtn {
+            width: 100%;
+        }
+
+
+        .row {
+            display: -ms-flexbox;
+            /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE10 */
+            flex-wrap: wrap;
+            margin: 0 -16px;
+        }
+
+        .col-25 {
+            -ms-flex: 25%;
+            /* IE10 */
+            flex: 25%;
+        }
+
+        .col-50 {
+            -ms-flex: 50%;
+            /* IE10 */
+            flex: 50%;
+        }
+
+        .col-75 {
+            -ms-flex: 75%;
+            /* IE10 */
+            flex: 75%;
+        }
+
+        .col-25,
+        .col-50,
+        .col-75 {
+            padding: 0 16px;
+        }
+
+        .container {
+            background-color: #f2f2f2;
+            padding: 5px 20px 15px 20px;
+            border: 1px solid lightgrey;
+            border-radius: 3px;
+        }
+
+        input[type=text] {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .icon-container {
+            margin-bottom: 20px;
+            padding: 7px 0;
+            font-size: 24px;
+        }
+
+        .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            width: 100%;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            color: #2196F3;
+        }
+
+        hr {
+            border: 1px solid lightgrey;
+        }
+
+        span.price {
+            float: right;
+            color: grey;
+        }
+
+        @media (max-width: 800px) {
+            .row {
+                flex-direction: column-reverse;
+            }
+
+            .col-25 {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Typography Rules */
+        .footer-column h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-column h3 span {
+            color: #34d399;
+            /* Emerald accent for branding */
+        }
+
+        .footer-column h4 {
+            color: #fff;
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        /* Small underline accent rule under headers */
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #34d399;
+        }
+
+        .footer-column p {
+            line-height: 1.6;
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+
+        /* List Item Formatting */
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        /* Smooth color transition on hover */
+        .footer-column ul li a:hover {
+            color: #34d399;
+            text-indent: 5px;
+            /* Slight push animation on hover */
+        }
+
+        /* Social Icon Layout */
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: #2d3748;
+            color: #fff;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #34d399;
+        }
+
+        /* Specific Real Estate Additions */
+        .contact-info i {
+            color: #34d399;
+            margin-right: 8px;
+            width: 16px;
+        }
+
+        .license-text {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            border-top: 1px solid #2d3748;
+            padding-top: 15px;
+        }
+
+        /* Copyright Strip Rules */
+        .footer-bottom {
+            background-color: #0f172a;
+            padding: 20px 0;
+            margin-top: 60px;
+            border-top: 1px solid #2d3748;
+        }
+
+        .footer-bottom-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom-container .eho i {
+            color: #64748b;
+            margin-right: 4px;
+        }
+
+        /* Mobile Media Queries */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .footer-bottom-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!--NAIGATION -->
-    <header class="navbar">
-        <div class="logo"> Fashion </div>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="service.html">Services</a>
-            <a href="cart.html">Cart</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html">Login</a>
-            <a href="register.html">Register</a>
-            </div>
-        </nav>
-        </div>
-    </header>
-    <!--------hero section------>
-    <section id="hero">
-        <h1>Redefine your style</h1>
-        <p>Disover the latest trends in global fashion
-            dress trading we should are cloth </p>
-        <img src="assets/kurti.jpg" alt=""> </a>
-        </div>
-
-    </section>
-    <!-----------about section-------->
-    <section id="about">
-        <div class="about-content">
-            <h2> About us</h2>
-            <p> modern style dress fashion design cloth</p>
-            <div class="about-image">
-                <div class="hero-meta" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">cloth</div>
-                <img src="assets/about.jpg" alt="">
-            </div>
-    </section>
-    <!--gallery section-->
-    <!-- GALLERY -->
-    <section class="gallery-section">
-
-        <div class="section-title">
-            <span>dress MOMENTS</span>
-            <h2>fashion dress</h2>
-            <p>
-                we should are dress design wonder
-                fashion dress beautiful moment
-            </p>
-        </div>
-        <!-- FILTERS -->
-        <div class="filters">
-            <button class="filter-btn active" onclick="filterGallery('all')">
-                ALL
-            </button>
-
-            <button class="filter-btn" onclick="filterGallery('kurti')">
-                kurti
-            </button>
-
-            <button class="filter-btn" onclick="filterGallery('dress')">
-                dress
-            </button>
-
-            <button class="filter-btn" onclick="filterGallery('gown')">
-                gown
-            </button>
-
-            <button class="filter-btn" onclick="filterGallery('fork')">
-                fork
-            </button>
-        </div>
-
-
-        <!-- GALLERY GRID -->
-        <div class="gallery-grid">
-
-            <div class="gallery-item face makeup">
-                <img src="assets/gallery1.jpg" alt="">
-                <div class="overlay">
-                    <div>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gallery-item nailpolish">
-                <img src="assets/gallery2.jpg" alt="">
-                <div class="overlay">
-                    <div>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gallery-item lipstick">
-                <img src="assets/gallery3.jpg" alt="">
-                <div class="overlay">
-                    <div>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gallery-item scrum">
-                <img src="assets/gallery4.jpg" alt="">
-                <div class="overlay">
-                    <div>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gallery-item makeup">
-                <img src="assets/gallery5.jpg" alt="">
-                <div class="overlay">
-                    <div>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gallery-item skincare">
-                <img src="assets/gallery6.jpg" alt="">
-                <div class="overlay">
-                    <div>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gallery-item hair">
-                <img src="assets/gallery7.jpg" alt="">
-                <div class="overlay">
-                    <div>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gallery-item cream">
-                <img src="assets/gallery8.jpg" alt="">
-                <div class="overlay">
-                    <div>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gallery-item makeup">
-                <img src="assets/gallery9.jpg" alt="">
-                <div class="overlay">
-                    <div>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- CART SECTION -->
-    <main class="cart-section">
-
-        <div class="cart-layout">
-
-            <!-- CART ITEMS -->
-            <div class="cart-box">
-
-                <h2 class="cart-title">Your Cart</h2>
-
-                <div class="cart-item">
-
-                    <img src="assets/dress dopatta.jpg" style="width: 40%;" alt="">
-
-                    <div class="item-info">
-                        <h3>doptta dress</h3>
-                        <p>Glow Collection • 30ml</p>
-
-                        <div class="quantity">
-                            <button onclick="changeQty(this, -1)">−</button>
-                            <span>1</span>
-                            <button onclick="changeQty(this, 1)">+</button>
-                        </div>
-
-                        <button class="remove" onclick="removeItem(this)">
-                            Remove
-                        </button>
-                    </div>
-
-                    <div class="item-total">
-                        ₹1,899
-                    </div>
-
-                </div>
-
-
-                <div class="cart-item">
-
-                    <img src="assets/gown.jpg" style="width: 40%;" alt="">
-
-                    <div class="item-info">
-                        <h3>Gown</h3>
-                        <p>dress • Rose Nude</p>
-
-                        <div class="quantity">
-                            <button onclick="changeQty(this, -1)">−</button>
-                            <span>1</span>
-                            <button onclick="changeQty(this, 1)">+</button>
-                        </div>
-
-                        <button class="remove" onclick="removeItem(this)">
-                            Remove
-                        </button>
-                    </div>
-
-                    <div class="item-total">
-                        ₹1,299
-                    </div>
-
-                </div>
-
-
-                <div class="cart-item">
-
-                    <img src="assets/wonder.jpg" style="width: 40%;" alt="">
-
-                    <div class="item-info">
-                        <h3>dress gown</h3>
-                        <p>dress beautifully skin</p>
-
-                        <div class="quantity">
-                            <button onclick="changeQty(this, -1)">−</button>
-                            <span>1</span>
-                            <button onclick="changeQty(this, 1)">+</button>
-                        </div>
-
-                        <button class="remove" onclick="removeItem(this)">
-                            Remove
-                        </button>
-                    </div>
-
-                    <div class="item-total">
-                        ₹1,599
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- ORDER SUMMARY -->
-            <aside class="summary">
-
-                <h2>Order Summary</h2>
-
-                <div class="summary-row">
-                    <span>Subtotal</span>
-                    <span id="subtotal">₹4,797</span>
-                </div>
-
-                <div class="summary-row">
-                    <span>Shipping</span>
-                    <span>FREE</span>
-                </div>
-
-                <div class="summary-row">
-                    <span>Discount</span>
-                    <span>₹0</span>
-                </div>
-
-                <div class="coupon">
-                    <input type="text" id="coupon" placeholder="Coupon code">
-                    <button onclick="applyCoupon()">APPLY</button>
-                </div>
-
-                <div class="summary-row total">
-                    <span>Total</span>
-                    <span id="total">₹4,797</span>
-                </div>
-
-                <button class="checkout" onclick="checkout()">
-                    PROCEED TO CHECKOUT
-                </button>
-
-                <a href="index.html" class="continue">
-                    ← Continue Shopping
-                </a>
-
-            </aside>
-
-        </div>
-
-        <!------services section-->
-        <section class="services">
+    <!-------header section--->
+    <section class="header" id="header">
+        <nav class="nav">
             <div class="container">
-                <h2 id="hero-heading">Create Fashion services to wonderful dress</h2>
-                <p>we should are there fashion dress services</p>
-                <a href="btn" href=" services.httml">CLOTH</a>
-            </div>
-            <div class="hero-images" aria-hidden="ture">
-                <img src="assets/dress dopatta.jpg" style="width: 30%;" alt="">
-            </div>
-            <h2 id="services-heading" style="margin:0 0 18px 0;text-align:center">Our Services</h2>
-            <div class="services-grid" role="list">
-                <article class="card" role="listitem" aria-labelledby="s1">
-                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-user-tie"></i></div>
-                    <h3 id="s1">westerns tyle</h3>
-                    <p>we should are take wonderful dress.</p>
-                </article>
+                <a href="#" class="logo">RealState</a>
 
-                <article class="card" role="listitem" aria-labelledby="s2">
-                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-box-open"></i></div>
-                    <h3 id="s2">gown</h3>
-                    <p>grown dress.</p>
-                </article>
+                <ul class="nav-link"></ul>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="property.html">property</a>
+                <a href="services.html">Services</a>
+                <a href="rent.html">Rent</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                </ul>
+        </nav>
+        </header>
 
-                <article class="card" role="listitem" aria-labelledby="s3">
-                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-star"></i></div>
-                    <h3 id="s3">traditional dress</h3>
-                    <p>Red carpet-ready or casual-chic looks for weddings, galas, interviews and special events, with
-                        on-site prep
-                        available.</p>
-                </article>
-
-                <article class="card" role="listitem" aria-labelledby="s4">
-                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-camera-retro"></i></div>
-                    <h3 id="s4">Photoshoot Styling</h3>
-                    <p>Collaborative styling for personal and commercial shoots — mood boards, outfit sourcing, and
-                        on-set
-                        adjustments.</p>
-                </article>
-
-                <article class="card" role="listitem" aria-labelledby="s5">
-                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></div>
-                    <h3 id="s5">Trend Consultation</h3>
-                    <p>Market-aware trend reports and capsule creation for influencers, boutiques, and brands seeking a
-                        fresh
-                        direction.</p>
-                </article>
-
-                <article class="card" role="listitem" aria-labelledby="s6">
-                    <div class="icon" aria-hidden="true"><i class="fa-solid fa-scissors"></i></div>
-                    <h3 id="s6">Alterations & Tailoring</h3>
-                    <p>Expert tailoring recommendations and partnerships with local tailors to ensure the perfect fit
-                        for your
-                        favorite pieces.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="cta" aria-labelledby="cta-heading">
-            <div class="cta-text">
-                <h3 id="cta-heading">Ready to transform your wardrobe?</h3>
-                <p>Book a free 15-minute styling call to discuss your goals and get a personalized plan.</p>
-            </div>
-            <div>
-                <a class="btn" href="contact.html">Book a Free Call</a>
-            </div>
-        </section>
-    </main>
-    <!-- CTA -->
-    <section class="cta" id="contact">
-        <small class="tag">fashion design dress</small>
-
-        <h2>Glow With Confidence.</h2>
-
-        <p>
-            Experience a new standard of design dress.
-        </p>
-
-        <a href="mailto:hello@fashionwebsite.com" class="btn">BOOK YOUR EXPERIENCE</a>
-    </section>
-    <!--------cta section end-->
-    <!-- VALUES -->
-    <section class="values">
-
-        <span class="section-label">Why Choose Us</span>
-
-        <h2>Our Dress Philosophy</h2>
-
-        <div class="value-grid">
-            <img src="assets/dress dopatta.jpg" style="width: 30%;" alt="">
-            <div class="value-card">
-                <div class="value-icon">✦</div>
-                <h3>Personalized</h3>
-                <p>
-                    Every client is unique. We create dress experiences
-                    tailored to your style, personality and occasion.
-                </p>
-            </div>
-
-            <div class="value-card">
-                <div class="value-icon">♡</div>
-                <h3> dress Care</h3>
-                <p>
-                    .fashion we are dress take perfect design
-                </p>
-            </div>
-
-            <div class="value-card">
-                <div class="value-icon">✧</div>
-                <h3>modern design dress</h3>
-                <p>
-                    .we should are tak
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-    <!-----contact form section------>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="#" method="POST">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </section>
-    <!------login section------->
-    <section id="login">
-        <div class="login-content">
-            <h2>Login</h2>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+        <!---hero------->
+        <secion class="hero">
+            <div class="container">
+                <div class="Layout-grid">
+                    <h1>find Your house Perfect home modern</h1>
+                    <img src="assets/interor.jpg" alt="">
                 </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <button type="submit" class="btn">Login</button>
-            </form>
-        </div>
+            </div>
     </section>
-    <!---register section--->
-    <section id="register">
-        <div class="register-content">
-            <h2>Register</h2>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <button type="submit" class="btn">Register</button>
-            </form>
-        </div>
-    </section>
-    <!----footer services--->
-    <footer>
-        <div class="container">
-            <div class="box">
+    <!------about start-------->
+    <section class="about" id="about">
+        <div class="about-intro-text">
+            <div class="content">
                 <div class="container">
-                    <div class="social-icon">
-                        <a href="#" aria-label="Facebook">Facebook</a>
-                        <a href="#" aria-label="Instagram">Instagram</a>
-                        <a href="#" aria-label="Pinterest">Pinterest</a>
-                        <a href="#" aria-label="Youtube">Youtube</a>
+                    <h2>about us</h2>
+
+                    <p> happy house RealEstate wonderful
+                        momement every day Dream</p>
+                    <img src="assets/realstate.jpg" style="width: 30%;" alt="">
+                </div>
+    </section>
+
+    <!--------------about end--------------->
+    <section class="cta-section">
+        <h3>Ready to Take the Next Step?</h3>
+        <p>Schedule a continuous, obligation-free consultation meeting with one of our licensed local agent teams today.
+        </p>
+        <a href="contact.html" class="btn-cta">Contact An Agent</a>
+    </section>
+    <!-------Services  section start-->
+    <section id="service" class="service">
+        <div class="row g-4">
+            <!-- Service 1: Property Sales -->
+            <div class="col-md-4">
+                <div class="card h-100 p-4 service-card shadow-sm">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <h3 class="h5 fw-bold">Property Buying & Sales</h3>
+                    <p class="text-muted">We guide you through the entire process of finding and purchasing your ideal
+                        residential
+                        or
+                        commercial property.</p>
+                    <a href="contact.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Learn
+                        More</a>
+                </div>
+            </div>
+            <!-- Service 2: Home Rental -->
+            <div class="col-md-4">
+                <div class="card h-100 p-4 service-card shadow-sm">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <h3 class="h5 fw-bold">Rental Solutions</h3>
+                    <p class="text-muted">Extensive listings matching vetted tenants with reliable property owners for
+                        seamless
+                        rental
+                        agreements.</p>
+                    <a href="contact.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Learn
+                        More</a>
+                </div>
+            </div>
+
+            <!-- Service 3: Property Management -->
+            <div class="col-md-4">
+                <div class="card h-100 p-4 service-card shadow-sm">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3 class="h5 fw-bold">Property Management</h3>
+                    <p class="text-muted">Full-service care taking handling rent collection, legal maintenance
+                        compliance,
+                        and
+                        on-call
+                        repairs.</p>
+                    <a href="contact.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Learn
+                        More</a>
+                </div>
+            </div>
+
+            <!-- Service 4: Financial Consulting -->
+            <div class="col-md-4">
+                <div class="card h-100 p-4 service-card shadow-sm">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 class="h5 fw-bold">Mortgage & Financial Advice</h3>
+                    <p class="text-muted">Get matched with optimized financing avenues and competitive loans from
+                        reliable
+                        lending
+                        institutions.</p>
+                    <a href="contact.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Learn
+                        More</a>
+                </div>
+            </div>
+
+            <!-- Service 5: Valuation Services -->
+            <div class="col-md-4">
+                <div class="card h-100 p-4 service-card shadow-sm">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="h5 fw-bold">Free Valuation</h3>
+                    <p class="text-muted">Receive a highly accurate real estate market analysis to price your property
+                        perfectly
+                        before
+                        listing.</p>
+                    <a href="contact.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Learn
+                        More</a>
+                </div>
+            </div>
+
+
+            <!-- Service 6: Legal Assistance -->
+            <div class="col-md-4">
+                <div class="card h-100 p-4 service-card shadow-sm">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="h5 fw-bold">Legal Advisory</h3>
+                    <p class="text-muted">Ensure standard real estate asset purchases remain clear of compliance traps
+                        and
+                        contract
+                        loop-holes.</p>
+                    <a href="contact.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Learn
+                        More</a>
+                </div>
+            </div>
+
+        </div>
+        </main>
+
+
+        </div>
+    </section>
+    <!---------services section end--->
+
+
+    <!-- Call to Action Banner -->
+    <section class="cta-section">
+        <h3>Ready to Take the Next Step?</h3>
+        <p>Schedule a continuous, obligation-free consultation meeting with one of our licensed local agent teams today.
+        </p>
+        <a href="contact.html" class="btn-cta">Contact An Agent</a>
+    </section>
+    <!-- Rental Listings Left Column -->
+    <section class="listings-container">
+        <h2 style="margin-bottom: 25px; color: var(--primary);">Available Rental Units</h2>
+
+        <div class="listings-grid">
+            <!-- Listing 1 -->
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <span class="tag-badge">New</span>
+                    <img src="assets/property management.jpg" alt="">
+                    <span class="price-badge">$2,200/mo</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Skyline Modern Apartment</h3>
+                    <p class="card-location"><i class="fa-solid fa-location-dot"></i> 742 Evergreen Terrace,
+                        Downtown
+                    </p>
+                    <div class="card-features">
+                        <span><i class="fa-solid fa-bed"></i> 2 Bed</span>
+                        <span><i class="fa-solid fa-bath"></i> 2 Bath</span>
+                        <span><i class="fa-solid fa-maximize"></i> 1,100 sqft</span>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h4>Shop</h4>
-                    <ul>
-                        <li><a href="#">New Arrivals</a></li>
-                        <li><a href="#">Women Collection</a></li>
-                        <li><a href="#">Men Collection</a></li>
-                        <li><a href="#">Accessories</a></li>
-                    </ul>
+            </article>
+
+            <!-- Listing 2 -->
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <span class="tag-badge">Featured</span>
+                    <img src="assets/legal assisyance.jpg" alt="">
+                    <span class="price-badge">$3,500/mo</span>
                 </div>
-                <div class="footer-col">
-                    <h4>Customer Care</h4>
-                    <ul>
-                        <li><a href="#">Track Order</a></li>
-                        <li><a href="#">Shipping & Returns</a></li>
-                        <li><a href="#">Size Guide</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
+                <div class="card-body">
+                    <h3 class="card-title">Oakridge Suburban House</h3>
+                    <!-----rental section end-->
+
+                    <!--------------------------property start-------------------->
+                    <section class="property" id="property">
+                        <div class="container">
+                            <h1>property housr</h1>
+                            <p>fill inthe black our property info</p>
+                            <from action="">
+                                <div class="form-group">
+                                    <label for=" frist name"> Frist name</label>
+                                    <input type="text" name="name" id="frist name" placeholder="your frist name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for=" lastt name"> last name</label>
+                                    <input type="text" name="name" id="last name" placeholder="your last name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for=" email">Email</label>
+                                    <input type="text" name="name" id="email" placeholder="your Email">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for=" adhar card">Adhar Card</label>
+                                    <input type="text" name="name" id="email" placeholder="your ">
+                                </div>
+
+
+
+                                <label for="propType">Property Type</label>
+                                <select id="propType" name="property_type">
+                                    <option value="villa">villia</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="modern">Modern</option>
+                                    <option value="interor">interor</option>
+                                    <option value="luxury">Luxury</option>
+                                </select>
+                        </div>
+
+                        <label for="rate">rate</label>
+                        <select id="property_rate" name="property rate">
+                            <option value="$100">$100</option>
+                            <option value="$200">$200</option>
+                            <option value="$300">$300</option>
+                            <option value="$400">$400</option>
+                            <option value="$500">Luxury</option>
+                        </select>
                 </div>
-                <div class="footer-col newsletter">
-                    <h4>Stay Updated</h4>
-                    <p>Subscribe to get special offers and styling tips.</p>
-                    <form action="#" method="POST">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit">Join</button>
-                    </form>
+                <div class="form-group">
+                    <label for="address">Street Address *</label>
+                    <input type="text" id="address" name="address" required>
                 </div>
+                <div class="inline-group">
+                    <div class="form-group">
+                        <label for="city">City </label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zipcode">Zip Code </label>
+                        <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}" title="Five-digit zip code"
+                            required>
+                    </div>
+                </div>
+    </section>
+    <!-------property section start----->
+
+    <!-- Contact Information -->
+    <div class="contact-info">
+
+        <h2>Contact Information</h2>
+
+        <div class="info">
+            <h4>🏢 Office Address</h4>
+            <p>123 Main Street, Downtown, New York, NY 10001</p>
+        </div>
+
+        <div class="info">
+            <h4>📞 Phone</h4>
+            <p>+1 (555) 123-4567</p>
+        </div>
+
+        <div class="info">
+            <h4>📧 Email</h4>
+            <p>info@dreamhomes.com</p>
+        </div>
+
+        <div class="info">
+            <h4>🕒 Office Hours</h4>
+            <p>Monday - Saturday<br>9:00 AM - 6:00 PM</p>
+        </div>
+
+    </div>
+
+    <!-- Contact section start-->
+    <h3>Contact Form</h3>
+
+    <div class="container">
+        <form action="#">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!--------------Contact Section end -------------->
+
+    <!---register start-->
+    <form action="#">
+        <div class="container">
+            <h1>Register</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+
+            <label for="email">Email</label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+            <label for="psw">Password</label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+            <label for="psw-repeat">Repeat Password</label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+            <hr>
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+            <button type="submit" class="registerbtn">Register</button>
+        </div>
+
+        <div class="container signin">
+            <p>Already have an account? <a href="#">Sign in</a>.</p>
+        </div>
+    </form>
+    <!--------register end-->
+    <!---login section start----->
+    <section id="login" class="login">
+        <div class="container">
+            <div class="content">
+                <h1> login up from</h1>
+                <form action="#">
+                    <div class="imgcontainer">
+                        <div class="container">
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" required>
+
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                            <button type="submit">Login</button>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" class="cancelbtn">Cancel</button>
+                            <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div>
+                </form>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 LUMIÈRE. All rights reserved.</p>
-                <ul class="legal-links">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+        </div>
+    </section>
+    <!-------------login section end------>
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+                <form action="/action_page.php">
+
+                    <div class="row">
+                        <div class="col-50">
+                            <h3>Billing Address</h3>
+                            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                            <input type="text" id="email" name="email" placeholder="john@example.com">
+                            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                            <label for="city"><i class="fa fa-institution"></i> City</label>
+                            <input type="text" id="city" name="city" placeholder="New York">
+
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="state">State</label>
+                                    <input type="text" id="state" name="state" placeholder="NY">
+                                </div>
+                                <div class="col-50">
+                                    <label for="zip">Zip</label>
+                                    <input type="text" id="zip" name="zip" placeholder="10001">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-50">
+                            <h3>Payment</h3>
+                            <label for="fname">Accepted Cards</label>
+                            <div class="icon-container">
+                                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                <i class="fa fa-cc-discover" style="color:orange;"></i>
+                            </div>
+                            <label for="cname">Name on Card</label>
+                            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                            <label for="ccnum">Credit card number</label>
+                            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                            <label for="expmonth">Exp Month</label>
+                            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="expyear">Exp Year</label>
+                                    <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                </div>
+                                <div class="col-50">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="352">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <label>
+                        <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                    </label>
+                    <input type="submit" value="Continue to checkout" class="btn">
+                </form>
+            </div>
+        </div>
+        <div class="col-25">
+            <div class="container">
+                <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span>
+                </h4>
+                <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+                <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+                <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+                <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+                <hr>
+                <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer Area -->
+    <footer>
+        <div class="section_container footer_container">
+            <div class="footer_col">
+                <button class="#">Get in touch</button>
+                <p>
+                    search house new modrn
+                    I'd love to hear from you!</p>
+            </div>
+            <div class="footer_col">
+                <h4 class="section-header">Where's My Office?</h4>
+                <p>
+                    123 Create Lane, Visit coffee website
+                </p>
+            </div>
+
+            <div class="footer_box">
+                <h4 class="section-header">My Social links</h4>
+                <a href="about.html">About</a>
+                <a href="property.html">Property</a>
+                <a href="services.html">Services</a>
+                <a href="rent.html">Rent</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
                 </ul>
+
+                <div class="box">
+                    <h3>contact info</h3>
+                    <a href="#"><i class="fas fa-phone"></i> +123-456-7890</a>
+                    <a href="#"><i class="fas fa-phone"></i> +111-222-3333</a>
+                    <a href="#"><i class="fas fa-envelope"></i> house@gmail.com</a>
+                    <a href="#"><i class="fas fa-envelope"></i> Perú, Lima</a>
+                </div>
+
+                <div class="box">
+                    <h3>contact info</h3>
+                    <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
+                    <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+                    <a href="#"><i class="fab fa-instagram"></i> instagram</a>
+                    <a href="#"><i class="fab fa-linkedin"></i> linkedin</a>
+                    <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+                </div>
             </div>
+        </div>
+        </div>
+        <p>&copy; © 2026 Dream Homes Real Estate.All rights reserved.</p>
     </footer>
 
-    <!------footer scetion-->
-    <script src=" stylesheet" href="style.css"></script>
-    </book>
+
+    <!---------------script link-------------------------------------->
+
+    <script src="style.css" href="script.js"></script>
+</body>
 
 </html>

@@ -2,160 +2,657 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=" device-width, initial-scale="8">
-    <title>Fast code ! Fashion</title>
-    <!-----custom link css-->
-    <link href="style.css" rel="stylesheet">
-    <!-------favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" href="content">
+  <title> fast code-Real Estate</title>
+  <!--------------google font link----------->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!----------css link ------>
+  <link ref="stylesheet" href="script.js">
+  <title> fast code-Real Estate</title>
 </head>
+<style>
+  <style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+    background-color: #f44336;
+  }
+
+  .hero {
+    min-height: 100dvh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(11, 4, 4, 0.1)), url(assets/realstate.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    width: 98%;
+    margin: auto;
+    padding: 10px 0;
+    border-bottom: 2px solid #8848b5;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0.20px;
+  }
+
+  nav ul li a {
+    font-size: 15px;
+    color: #b61313;
+    text-transform: uppercase;
+  }
+
+  .nav ul li a:hover {
+    border-bottom: 2px solid chocolate;
+  }
+
+  nav button {
+    background: transparent;
+    padding: 11px 35px;
+    border: 2px solid #23df;
+    font-size: 15px;
+    font-weight: 600;
+    color: #b61313;
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  nav button:hover {
+    color: #8848b5;
+    background: #b61313;
+    scale: .8s;
+  }
+
+  .content {
+    position: absolute;
+    top: 35%;
+    left: 90px;
+  }
+
+  h2 {
+    color: darkgoldenrod;
+    font-size: 52px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: aquamarine;
+    font-size: 11px;
+    margin-top: 10px;
+  }
+
+  .content button {
+    padding: 12px 45px;
+    border: 2px solid darkmagenta;
+    color: bisque;
+    background: #b61313;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 50px;
+    transition: .5s;
+  }
+
+  .content button:hover {
+    scale: .9;
+  }
+
+  .content button.know_more {
+    background: transparent;
+    color: blanchedalmond;
+    margin-left: 25px;
+  }
+
+  .content button.know_more:hover {
+    background: #8848b5;
+    color: antiquewhite;
+    scale: .1;
+  }
+
+  .services-section {
+    padding: 80px 20px;
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* --- Section Header --- */
+  .services-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+  }
+
+  .services-header .sub-title {
+    color: var(--accent-color);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .services-header h2 {
+    color: var(--primary-color);
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  /* --- Responsive Layout Grid --- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* --- Individual Service Cards --- */
+  .service-card {
+    background-color: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+  }
+
+  /* Hover Effects */
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition);
+  }
+
+  .service-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  /* --- Card Components --- */
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #fef3c7;
+    /* Light gold tint */
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .service-card h3 {
+    color: var(--primary-color);
+    font-size: 22px;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+  }
+
+  .service-card p {
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+  }
+
+  /* Read More Link */
+  .service-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: var(--transition);
+  }
+
+  .service-link:hover {
+    color: var(--accent-color);
+  }
+
+
+  form {
+    border: 3px solid #f1f1f1;
+  }
+
+  form {
+    border: 3px solid #f1f1f1;
+  }
+
+  input[type=text],
+  input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+  .cancelbtn {
+    width: 100%;
+  }
+
+
+  .real-estate-footer {
+    background-color: #1a2530;
+    color: #e2e8f0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    padding: 60px 0 0 0;
+    font-size: 0.95rem;
+  }
+
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  /* Column Rules */
+  .footer-column {
+    flex: 1 1 220px;
+    /* Responsive resizing with min-width of 220px */
+  }
+
+  /* Typography Rules */
+  .footer-column h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .footer-column h3 span {
+    color: #34d399;
+    /* Emerald accent for branding */
+  }
+
+  .footer-column h4 {
+    color: #fff;
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+  }
+
+  /* Small underline accent rule under headers */
+  .footer-column h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #34d399;
+  }
+
+  .footer-column p {
+    line-height: 1.6;
+    color: #94a3b8;
+    margin-bottom: 15px;
+  }
+
+  /* List Item Formatting */
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 12px;
+  }
+
+  .footer-column ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  /* Smooth color transition on hover */
+  .footer-column ul li a:hover {
+    color: #34d399;
+    text-indent: 5px;
+    /* Slight push animation on hover */
+  }
+
+  /* Social Icon Layout */
+  .social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #2d3748;
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    background-color: #34d399;
+  }
+
+  /* Specific Real Estate Additions */
+  .contact-info i {
+    color: #34d399;
+    margin-right: 8px;
+    width: 16px;
+  }
+
+  .license-text {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    border-top: 1px solid #2d3748;
+    padding-top: 15px;
+  }
+
+  /* Copyright Strip Rules */
+  .footer-bottom {
+    background-color: #0f172a;
+    padding: 20px 0;
+    margin-top: 60px;
+    border-top: 1px solid #2d3748;
+  }
+
+  .footer-bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    color: #64748b;
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom-container .eho i {
+    color: #64748b;
+    margin-right: 4px;
+  }
+
+  /* Mobile Media Queries */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .footer-bottom-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
 
 <body>
-    <!--NAIGATION -->
-    <header class="navbar">
-        <div class="logo"> Fashion </div>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="service.html">Services</a>
-            <a href="cart.html">Cart</a>
-            <a href="trading.html">Trading</a>
-            <a href="contact.html">Conact</a>
-
-            <div class="auth-button">
-                <a href="#login" class="login-button">login</a>
-                <a href="#register" class="btn-primary">Rgister</a>
-            </div>
-        </nav>
-        </div>
+  <!-------header section--->
+  <section class="header" id="header">
+    <div class="container">
+      <div class="logo">RealState</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="property.html">property</a>
+        <a href="services.html">Services</a>
+        <a href="rental.html">Rental</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </nav>
+    </div>
     </header>
-    <!--------hero section------>
-    <section id="hero">
-        <h1>Redefine your style</h1>
-        <p>Disover the latest trends in global fashion
-            dress trading we should are cloth </p>
-        <img src="assets/kurti.jpg" alt=""> </a>
+    <!---hero------->
+    <secion class="hero">
+      <div class="container">
+        <div class="Layout-grid">
+          <h1>find Your house Perfect home modern</h1>
         </div>
-        <a class="btn" href="traditional.html">traditional</a>
-    </section>
-    <!------services section-->
-    <section class="services">
-        <div class="container">
-            <h2 id="hero-heading">Create Fashion services to wonderful dress</h2>
-            <p>we should are there fashion dress services</p>
-            <a href="btn" href=" services.httml">CLOTH</a>
+  </section>
+  <!---hero end -->
+  <section class="cta-section">
+    <h3>Ready to Take the Next Step?</h3>
+    <p>Schedule a continuous, obligation-free consultation meeting with one of our licensed local agent teams today.</p>
+    <a href="contact.html" class="btn-cta">Contact An Agent</a>
+  </section>
+  <!-------Services  section start-->
+  <section id="service" class="service">
+    <div class="row g-4">
+      <!-- Service 1: Property Sales -->
+      <div class="col-md-4">
+        <div class="card h-100 p-4 service-card shadow-sm">
+          <div class="icon-box">
+            <i class="fa-solid fa-house-chimney"></i>
+          </div>
+          <h3 class="h5 fw-bold">Property Buying & Sales</h3>
+          <p class="text-muted">We guide you through the entire process of finding and purchasing your ideal residential
+            or
+            commercial property.</p>
+          <a href="contact.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Learn More</a>
         </div>
-        <div class="hero-images" aria-hidden="ture">
-            <img src="assets/dress dopatta.jpg" alt="">
+      </div>
+      <!-- Service 2: Home Rental -->
+      <div class="col-md-4">
+        <div class="card h-100 p-4 service-card shadow-sm">
+          <div class="icon-box">
+            <i class="fa-solid fa-key"></i>
+          </div>
+          <h3 class="h5 fw-bold">Rental Solutions</h3>
+          <p class="text-muted">Extensive listings matching vetted tenants with reliable property owners for seamless
+            rental
+            agreements.</p>
+          <a href="contact.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Learn More</a>
         </div>
-        <h2 id="services-heading" style="margin:0 0 18px 0;text-align:center">Our Services</h2>
-        <div class="services-grid" role="list">
-            <article class="card" role="listitem" aria-labelledby="s1">
-                <div class="icon" aria-hidden="true"><i class="fa-solid fa-user-tie"></i></div>
-                <h3 id="s1">westerns tyle</h3>
-                <p>we should are take wonderful dress.</p>
-            </article>
+      </div>
 
-            <article class="card" role="listitem" aria-labelledby="s2">
-                <div class="icon" aria-hidden="true"><i class="fa-solid fa-box-open"></i></div>
-                <h3 id="s2">gown</h3>
-                <p>grown dress.</p>
-            </article>
-
-            <article class="card" role="listitem" aria-labelledby="s3">
-                <div class="icon" aria-hidden="true"><i class="fa-solid fa-star"></i></div>
-                <h3 id="s3">traditional dress</h3>
-                <p>Red carpet-ready or casual-chic looks for weddings, galas, interviews and special events, with
-                    on-site prep
-                    available.</p>
-            </article>
-
-            <article class="card" role="listitem" aria-labelledby="s4">
-                <div class="icon" aria-hidden="true"><i class="fa-solid fa-camera-retro"></i></div>
-                <h3 id="s4">Photoshoot Styling</h3>
-                <p>Collaborative styling for personal and commercial shoots — mood boards, outfit sourcing, and
-                    on-set
-                    adjustments.</p>
-            </article>
-
-            <article class="card" role="listitem" aria-labelledby="s5">
-                <div class="icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></div>
-                <h3 id="s5">Trend Consultation</h3>
-                <p>Market-aware trend reports and capsule creation for influencers, boutiques, and brands seeking a
-                    fresh
-                    direction.</p>
-            </article>
-
-            <article class="card" role="listitem" aria-labelledby="s6">
-                <div class="icon" aria-hidden="true"><i class="fa-solid fa-scissors"></i></div>
-                <h3 id="s6">Alterations & Tailoring</h3>
-                <p>Expert tailoring recommendations and partnerships with local tailors to ensure the perfect fit
-                    for your
-                    favorite pieces.</p>
-            </article>
+      <!-- Service 3: Property Management -->
+      <div class="col-md-4">
+        <div class="card h-100 p-4 service-card shadow-sm">
+          <div class="icon-box">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <h3 class="h5 fw-bold">Property Management</h3>
+          <p class="text-muted">Full-service care taking handling rent collection, legal maintenance compliance, and
+            on-call
+            repairs.</p>
+          <a href="contact.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Learn More</a>
         </div>
-    </section>
+      </div>
 
-    <section class="cta" aria-labelledby="cta-heading">
-        <div class="cta-text">
-            <h3 id="cta-heading">Ready to transform your wardrobe?</h3>
-            <p>Book a free 15-minute styling call to discuss your goals and get a personalized plan.</p>
+      <!-- Service 4: Financial Consulting -->
+      <div class="col-md-4">
+        <div class="card h-100 p-4 service-card shadow-sm">
+          <div class="icon-box">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+          </div>
+          <h3 class="h5 fw-bold">Mortgage & Financial Advice</h3>
+          <p class="text-muted">Get matched with optimized financing avenues and competitive loans from reliable lending
+            institutions.</p>
+          <a href="contact.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Learn More</a>
         </div>
-        <div>
-            <a class="btn" href="contact.html">Book a Free Call</a>
+      </div>
+
+      <!-- Service 5: Valuation Services -->
+      <div class="col-md-4">
+        <div class="card h-100 p-4 service-card shadow-sm">
+          <div class="icon-box">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="h5 fw-bold">Free Valuation</h3>
+          <p class="text-muted">Receive a highly accurate real estate market analysis to price your property perfectly
+            before
+            listing.</p>
+          <a href="contact.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Learn More</a>
         </div>
-    </section>
+      </div>
+
+
+      <!-- Service 6: Legal Assistance -->
+      <div class="col-md-4">
+        <div class="card h-100 p-4 service-card shadow-sm">
+          <div class="icon-box">
+            <i class="fa-solid fa-scale-balanced"></i>
+          </div>
+          <h3 class="h5 fw-bold">Legal Advisory</h3>
+          <p class="text-muted">Ensure standard real estate asset purchases remain clear of compliance traps and
+            contract
+            loop-holes.</p>
+          <a href="contact.html" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Learn More</a>
+        </div>
+      </div>
+
+    </div>
     </main>
-    <!----footer services--->
-    <footer>
-        <div class="container">
-            <div class="box">
-                <div class="container">
-                    <div class="social-icon">
-                        <a href="#" aria-label="Facebook">Facebook</a>
-                        <a href="#" aria-label="Instagram">Instagram</a>
-                        <a href="#" aria-label="Pinterest">Pinterest</a>
-                        <a href="#" aria-label="Youtube">Youtube</a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Shop</h4>
-                    <ul>
-                        <li><a href="#">New Arrivals</a></li>
-                        <li><a href="#">Women Collection</a></li>
-                        <li><a href="#">Men Collection</a></li>
-                        <li><a href="#">Accessories</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Customer Care</h4>
-                    <ul>
-                        <li><a href="#">Track Order</a></li>
-                        <li><a href="#">Shipping & Returns</a></li>
-                        <li><a href="#">Size Guide</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col newsletter">
-                    <h4>Stay Updated</h4>
-                    <p>Subscribe to get special offers and styling tips.</p>
-                    <form action="#" method="POST">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit">Join</button>
-                    </form>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 LUMIÈRE. All rights reserved.</p>
-                <ul class="legal-links">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
-    </footer>
-    <!------footer scetion-->
-    <script src=" stylesheet" href="style.css"></script>
-    </book>
+
+
+    </div>
+  </section>
+  <!---------services section end--->
+
+  <!-- Call to Action Banner -->
+  <section class="cta-section">
+    <h3>Ready to Take the Next Step?</h3>
+    <p>Schedule a continuous, obligation-free consultation meeting with one of our licensed local agent teams today.</p>
+    <a href="contact.html" class="btn-cta">Contact An Agent</a>
+  </section>
+
+  <!-------footer section start------------->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <h2>contact us</h2>
+        <p>Email:info@example.com</p>
+        <p>phone + 21 56556 565556</p>
+        <p>Address: your Address 123 Street</p>
+      </div>
+      <div class="footer-content">
+        <h1>Quick link</h1>
+        <a href="about.html">About</a>
+        <a href="service.html">Services</a>
+        <a href="property.html">property</a>
+        <a href="rental.html">Rental</a>
+        <a href="saller.html">Saller</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div clss="footer-content">
+        <h2> follow</h2>
+        <a href="services.html">Services</a>
+        <a href="property.html">Property</a>
+        <a href="booking.html">booking</a>
+        <a href="inform.html">Information</a>
+      </div>
+
+      <div class="footer-content">
+        <h2>follow</h2>
+        <a href="#"><i class="fab-fa-facebook"></i></a>
+        <a href="#"><i class="fab-fa-twitter"></i></a>
+        <a href="#"><i class="fab-fa-youtube"></i></a>
+        <a href="#"><i class="fab-fa-instagram"></i></a>
+      </div>
+      <p>&copy; © 2026 Dream Homes Real Estate.All rights reserved.</p>
+  </footer>
+  <!--------footer end -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
 
 </html>
